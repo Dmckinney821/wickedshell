@@ -62,7 +62,7 @@ validfloat()
 
         # Finally, check that the remaining digits are actually
         # valid as integers.
-        if ! validint "$fvalue: "" "" ; then
+        if ! validint "$fvalue" "" "" ; then
             return 1
         fi
     fi
