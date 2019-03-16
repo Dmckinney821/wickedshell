@@ -21,24 +21,24 @@ monthNumToName()
 #BEGIN MAIN SCRIPT--DELETE OR COMMENT OUT EVERYTHING BELOW THIS LINE IF YOU WANT TO INCLUDE THIA IN OTHER SCRIPTA
 # ===================
 # Input validation
-if [ $# -ne 3 ] ; then
-  echo "Usage $0 month day year" >&2
-  echo "Formats are August 3 1962 and 8 3 1962" >&2
-  exit 1
-fi
-if [ $3 -le 99 ] ; then
-  echo "$0: expected 4-digit year value" >&2
-  exit 1
-fi
+#if [ $# -ne 3 ] ; then
+ # echo "Usage $0 month day year" >&2
+  #echo "Formats are August 3 1962 and 8 3 1962" >&2
+  #exit 1
+#fi
+#if [ $3 -le 99 ] ; then
+ # echo "$0: expected 4-digit year value" >&2
+ # exit 1
+#fi
 
 # Is the month input format a number?
-if [ -z $(echo $1|sed 's/[[:digit:]]//g') ]; then
-  monthNumToName $1
-else
-  month="$(echo $1|cut -c1|tr '[:lower:]' '[:upper:]')"
-  month="$month$(echo $1|cut -c2-3 | tr '[:upper:]' '[:lower:]')"
-fi
+#if [ -z $(echo $1|sed 's/[[:digit:]]//g') ]; then
+ # monthNumToName $1
+#else
+ # month="$(echo $1|cut -c1|tr '[:lower:]' '[:upper:]')"
+  #month="$month$(echo $1|cut -c2-3 | tr '[:upper:]' '[:lower:]')"
+#fi
 
-echo $month $2 $3
+#echo $month $2 $3
 
-exit 0
+#exit 0
