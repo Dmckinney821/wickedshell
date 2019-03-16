@@ -67,9 +67,9 @@ fi
 #Split the normalized date format, where
 # first word = month, second word = day, third word = year. 
 
-month="$(echo $newdate | cut -d\ -f1)"
-day="$(echo $newdate | cut -d\ -f2)"
-year="$(echo $newdate | cut -d\ -f3)"
+month="$(echo $newdate | cut -d\  -f1)"
+day="$(echo $newdate | cut -d\  -f2)"
+year="$(echo $newdate | cut -d\  -f3)"
 
 # Now that we have a normalized date, let's check whether the
 # day value is legal and valid (e.g., not Jan 36).
