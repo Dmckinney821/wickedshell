@@ -1,4 +1,3 @@
-echon()
-{
-    printf "%s" "$*"
+echon() {
+	echo "$*" | tr -d '\n'
 }
