@@ -5,11 +5,11 @@
 biggest=100         #Maximum number possible
 guess=0             #Guessed by player
 guesses=0           #Number of guess made
-number=$(( $$ % $biggest  )) #Random number, between 1 and $biggest
+$(( $RANDOM % $biggest + 1 )) #Random number, between 1 and $biggest
 echo "Guess a number between 1 and $biggest
 
 while [ "$guess" -ne $number ] ; do
-     -n "Guess? ; read answer
+    /bin/echo -n "Guess? ; read answer
     if [ "$guess" -lt  number ] ; then
         echo "...bigger!"
     elif [ "$guess" -gt $number ] ; then
